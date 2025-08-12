@@ -1,0 +1,349 @@
+   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600&display=swap');
+        #amenities img {display: inline-block;}
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-dm { font-family: 'DM Sans', sans-serif; }
+        
+        .hero-gradient {
+            background: url(images/kothagiri-real-estate-homebanner.jpg) no-repeat 0 0;
+            background-size: cover;
+        }
+        
+        .gold-gradient {
+            background: #820010;
+        }
+
+        .gold-gradients {
+            background: #820010;
+        }
+        
+        .highlight-text {
+            color: #9B2626;
+        }
+        
+        .primary-button {
+            background: #8b0202;
+            color: white;
+        }
+        
+        .primary-button:hover {
+            background: #9B2626;
+        }
+        
+        .luxury-card {
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .floating-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+
+        /* Feature Hover Effect Styles */
+        .feature-hover-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-hover-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(139, 2, 2, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .feature-hover-card:hover::before {
+            left: 100%;
+        }
+        
+        .feature-image {
+            transition: all 0.5s ease-in-out;
+            opacity: 0;
+            transform: scale(0.95);
+        }
+        
+        .feature-image.active {
+            opacity: 1 !important;
+            transform: scale(1) !important;
+        }
+        
+        /* Floor Plan Zoom Modal Styles */
+        .zoom-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            backdrop-filter: blur(0px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .zoom-modal.active {
+            opacity: 1;
+            visibility: visible;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        
+        .zoom-modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            transform: scale(0.3) rotate(10deg);
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            filter: blur(5px);
+        }
+        
+        .zoom-modal.active .zoom-modal-content {
+            transform: scale(1) rotate(0deg);
+            opacity: 1;
+            filter: blur(0px);
+        }
+        
+        .zoom-close {
+            position: absolute;
+            top: -60px;
+            right: -10px;
+            background: linear-gradient(135deg, #8b0202, #a51d1d);
+            color: white;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: bold;
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(139, 2, 2, 0.4);
+            transform: scale(0.8) rotate(-90deg);
+            opacity: 0;
+        }
+        
+        .zoom-modal.active .zoom-close {
+            transform: scale(1) rotate(0deg);
+            opacity: 1;
+        }
+        
+        .zoom-close:hover {
+            background: linear-gradient(135deg, #a51d1d, #c92a2a);
+            transform: scale(1.15) rotate(90deg);
+            box-shadow: 0 15px 40px rgba(139, 2, 2, 0.6);
+        }
+        
+        .floor-plan-zoomed {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+            transition: all 0.3s ease;
+        }
+        
+        .floor-plan-zoomed:hover {
+            transform: scale(1.02);
+            box-shadow: 0 40px 100px rgba(0, 0, 0, 0.9);
+        }
+
+        /* Gallery Zoom Modal Styles */
+        .gallery-zoom-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            backdrop-filter: blur(0px);
+            z-index: 10000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .gallery-zoom-modal.active {
+            opacity: 1;
+            visibility: visible;
+            background: rgba(0, 0, 0, 0.97);
+            backdrop-filter: blur(15px);
+        }
+        
+        .gallery-zoom-content {
+            position: relative;
+            max-width: 85%;
+            max-height: 85%;
+            transform: scale(0.2) rotate(15deg) translateY(100px);
+            opacity: 0;
+            transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 50px 120px rgba(0, 0, 0, 0.9);
+            filter: blur(10px);
+        }
+        
+        .gallery-zoom-modal.active .gallery-zoom-content {
+            transform: scale(1) rotate(0deg) translateY(0px);
+            opacity: 1;
+            filter: blur(0px);
+        }
+        
+        .gallery-zoom-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 25px;
+            transition: all 0.4s ease;
+        }
+        
+        .gallery-zoom-image:hover {
+            transform: scale(1.03);
+        }
+        
+        .gallery-zoom-close {
+            position: absolute;
+            top: -70px;
+            right: -10px;
+            background: linear-gradient(135deg, #8b0202, #a51d1d);
+            color: white;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 28px;
+            font-weight: bold;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 15px 40px rgba(139, 2, 2, 0.6);
+            transform: scale(0.5) rotate(-180deg);
+            opacity: 0;
+        }
+        
+        .gallery-zoom-modal.active .gallery-zoom-close {
+            transform: scale(1) rotate(0deg);
+            opacity: 1;
+        }
+        
+        .gallery-zoom-close:hover {
+            background: linear-gradient(135deg, #a51d1d, #c92a2a);
+            transform: scale(1.2) rotate(180deg);
+            box-shadow: 0 20px 50px rgba(139, 2, 2, 0.8);
+        }
+        
+        .gallery-zoom-title {
+            position: absolute;
+            bottom: -100px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            color: white;
+            background: linear-gradient(135deg, rgba(139, 2, 2, 0.95), rgba(165, 29, 29, 0.95));
+            padding: 25px;
+            border-radius: 20px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+            transform: translateY(50px);
+            opacity: 0;
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .gallery-zoom-modal.active .gallery-zoom-title {
+            transform: translateY(0px);
+            opacity: 1;
+        }
+        
+        .gallery-zoom-title h3 {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .gallery-zoom-title p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .gallery-slide-zoom-indicator {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(139, 2, 2, 0.8));
+            color: white;
+            padding: 10px 16px;
+            border-radius: 25px;
+            font-size: 13px;
+            font-weight: bold;
+            opacity: 0;
+            transform: scale(0.8) translateY(-10px);
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            pointer-events: none;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .swiper-slide:hover .gallery-slide-zoom-indicator {
+            opacity: 1;
+            transform: scale(1) translateY(0px);
+        }
+        
+        .gallery-slide {
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            cursor: pointer;
+        }
+        
+        .gallery-slide:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .floor-plan-container {
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .floor-plan-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(139, 2, 2, 0.15);
+        }

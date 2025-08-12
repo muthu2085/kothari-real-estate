@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Residences - Starting at ₹2.95 Crores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</head>
+<body class="font-dm bg-gray-50">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-lg">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                   <img src="images/logo-kothar-estates.png" width="100" />
+                </div>
+                
+                <!-- Navigation Menu -->
+                <nav class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" onclick="scrollToSection('home')" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors">Home</a>
+                    <a href="#why-choose" onclick="scrollToSection('why-choose')" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors">Why Choose</a>
+                    <a href="#features" onclick="scrollToSection('features')" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors">Features</a>
+                    <a href="#gallery" onclick="scrollToSection('gallery')" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors">Gallery</a>
+                    <a href="#amenities" onclick="scrollToSection('amenities')" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors">Amenities</a>
+                    <a href="#floor-plan" onclick="scrollToSection('floor-plan')" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors">Floor Plan</a>
+                    <a href="#tour" onclick="scrollToSection('tour')" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors">Book Tour</a>
+                </nav>
+                
+                <!-- Contact Info -->
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:block text-right">
+                        <p class="text-sm font-semibold text-gray-900">+91 98765 43210</p>
+                        <p class="text-xs text-gray-600">Call Now</p>
+                    </div>
+                    <a href="https://wa.me/919876543210" target="_blank" class="bg-green-500 hover:bg-green-600 text-white p-3 rounded-full transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.700"/>
+                        </svg>
+                    </a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn" class="lg:hidden p-2 text-gray-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="lg:hidden hidden bg-white border-t border-gray-200 py-4">
+                <nav class="flex flex-col space-y-4">
+                    <a href="#home" onclick="scrollToSection('home')" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors px-4">Home</a>
+                    <a href="#why-choose" onclick="scrollToSection('why-choose')" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors px-4">Why Choose</a>
+                    <a href="#features" onclick="scrollToSection('features')" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors px-4">Features</a>
+                    <a href="#gallery" onclick="scrollToSection('gallery')" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors px-4">Gallery</a>
+                    <a href="#amenities" onclick="scrollToSection('amenities')" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors px-4">Amenities</a>
+                    <a href="#floor-plan" onclick="scrollToSection('floor-plan')" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors px-4">Floor Plan</a>
+                    <a href="#tour" onclick="scrollToSection('tour')" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors px-4">Book Tour</a>
+                    <div class="px-4 pt-2 border-t border-gray-200">
+                        <p class="text-sm font-semibold text-gray-900">+91 98765 43210</p>
+                        <p class="text-xs text-gray-600">Call Now</p>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white min-h-screen flex items-center relative overflow-hidden pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-brown-900/90 to-red-900/90"></div>
+    
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center fade-in">
+                <h1 class="font-playfair text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                    Experience <span class="text-white bg-clip-text text-transparent">Elevated Living</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-4 text-gray-200">
+                    3, 4, 5 BHK Homes & Penthouses Starting at ₹2.95 Crores
+                </p>
+                <p class="text-lg mb-8 text-gray-300 max-w-2xl mx-auto">
+                    Step into a world where every detail is curated for your comfort and style. Discover spacious residences designed by internationally acclaimed Andy Fisher and Hadi Tehrani.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="scrollToSection('tour')" class="gold-gradient text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transition-all duration-300 hover-scale">
+                        Book Private Tour
+                    </button>
+                    <button onclick="scrollToSection('amenities')" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
+                        Explore Amenities
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Architecture Icons -->
+        <div class="absolute top-20 right-20 floating-animation opacity-20">
+            <svg class="w-24 h-24" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+            </svg>
+        </div>
+        <div class="absolute bottom-20 left-20 floating-animation opacity-20" style="animation-delay: -2s;">
+            <svg class="w-20 h-20" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M19 9.3V4h-3v2.6L12 3L2 12h3v8h5v-6h4v6h5v-8h3L19 9.3z"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section id="why-choose" class="py-20" style="background-color: #F9F2F2;">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Why Choose Our <span class="highlight-text">Residences?</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Welcome to a new standard of luxury where innovation meets elegance
+                </p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left Column - Apartment Swiper -->
+                <div class="relative">
+                    <img src="images/kothagiri-real-estate-ban-1.jpg" class=""/>
+               
+                    
+                    <!-- Floating badge -->
+                    <div class="absolute text-white -top-4 -right-4 gold-gradient px-6 py-3 rounded-full font-bold text-sm shadow-xl z-30">
+                        Starting ₹2.95 Cr
+                    </div>
+                </div>
+                
+                <!-- Right Column - Features -->
+                <div class="space-y-8">
+                    <div class="luxury-card p-8 rounded-2xl hover-scale bg-white shadow-lg border border-gray-100">
+                        <div class="flex items-start space-x-6">
+                            <div class="bg-white w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                               <img src="images/home-automation.png" width="72" />
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-playfair text-2xl font-bold text-gray-900 mb-4">Home Automation</h3>
+                                <p class="text-gray-600">Enjoy seamless living with state-of-the-art smart home features—control lighting, security, and climate at your fingertips.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="luxury-card p-8 rounded-2xl hover-scale bg-white shadow-lg border border-gray-100">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                                <img src="images/rooftop.png" width="72" />
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-playfair text-2xl font-bold text-gray-900 mb-4">Curated Rooftop Experiences</h3>
+                                <p class="text-gray-600">Unwind in beautifully landscaped rooftop spaces, perfect for gatherings, relaxation, and breathtaking city views.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="luxury-card p-8 rounded-2xl hover-scale bg-white shadow-lg border border-gray-100">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                                <img src="images/living-room.png" width="72" />
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-playfair text-2xl font-bold text-gray-900 mb-4">Signature Design</h3>
+                                <p class="text-gray-600">Each home is a masterpiece, blending modern elegance with timeless sophistication, crafted by world-renowned architects.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="luxury-card p-8 rounded-2xl hover-scale bg-white shadow-lg border border-gray-100">
+                        <div class="flex items-start space-x-6">
+                            <div class="w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                                  <img src="images/plans.png" width="72" />
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-playfair text-2xl font-bold text-gray-900 mb-4">Spacious Layouts</h3>
+                                <p class="text-gray-600">Expansive living areas, private balconies, and premium finishes create the perfect sanctuary for your family.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section with Hover-Based Image Display -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Discover Our <span class="highlight-text">Signature Features</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Explore the exceptional elements that make our residences truly extraordinary. Each feature is thoughtfully designed to enhance your lifestyle.
+                </p>
+            </div>
+            
+            <div class="max-w-7xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <!-- Feature Cards Column -->
+                    <div class="space-y-6">
+                        <!-- Smart Home Feature -->
+                        <div class="feature-hover-card bg-white p-8 rounded-2xl shadow-lg border border-gray-100 cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105 hover:border-[#8b0202]" data-feature="smart-home">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-gradient-to-r from-[#8b0202] to-[#951818] w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-playfair text-2xl font-bold text-gray-900 mb-3">Smart Home Technology</h3>
+                                    <p class="text-gray-600 mb-4">Experience the future of home living with our comprehensive smart home ecosystem. Control lighting, temperature, security, and entertainment with voice commands or your smartphone.</p>
+                                    <ul class="space-y-2 text-sm text-gray-600">
+                                        <li class="flex items-center space-x-2">
+                                            <span class="w-2 h-2 bg-[#8b0202] rounded-full"></span>
+                                            <span>Voice-activated controls</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <span class="w-2 h-2 bg-[#8b0202] rounded-full"></span>
+                                            <span>Automated climate control</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <span class="w-2 h-2 bg-[#8b0202] rounded-full"></span>
+                                            <span>Advanced security integration</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Luxury Interiors Feature -->
+                        <div class="feature-hover-card bg-white p-8 rounded-2xl shadow-lg border border-gray-100 cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105 hover:border-[#8b0202]" data-feature="luxury-interiors">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-gradient-to-r from-[#8b0202] to-[#951818] w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                        <path d="M7 13c1.66 0 3-1.34 3-3S8.66 7 7 7s-3 1.34-3 3 1.34 3 3 3zm12-6h-8v7H3V7H1v13h2v-2h18v2h2V10c0-2.21-1.79-4-4-4z"/>
+                                    </svg>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-playfair text-2xl font-bold text-gray-900 mb-3">Luxury Interiors</h3>
+                                    <p class="text-gray-600 mb-4">Every interior space is a masterpiece of design, featuring premium materials, bespoke furnishings, and artistic details that reflect your sophisticated taste.</p>
+                                    <ul class="space-y-2 text-sm text-gray-600">
+                                        <li class="flex items-center space-x-2">
+                                            <span class="w-2 h-2 bg-[#8b0202] rounded-full"></span>
+                                            <span>Italian marble finishes</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <span class="w-2 h-2 bg-[#8b0202] rounded-full"></span>
+                                            <span>Designer lighting systems</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <span class="w-2 h-2 bg-[#8b0202] rounded-full"></span>
+                                            <span>Custom built-in furniture</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Wellness Feature -->
+                        <div class="feature-hover-card bg-white p-8 rounded-2xl shadow-lg border border-gray-100 cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105 hover:border-[#8b0202]" data-feature="wellness">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-gradient-to-r from-[#8b0202] to-[#951818] w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white text-2xl">🧘‍♀️</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-playfair text-2xl font-bold text-gray-900 mb-3">Wellness & Recreation</h3>
+                                    <p class="text-gray-600 mb-4">Your well-being is our priority. Discover comprehensive wellness facilities designed to nurture your physical, mental, and emotional health right at home.</p>
+                                    <ul class="space-y-2 text-sm text-gray-600">
+                                        <li class="flex items-center space-x-2">
+                                            <span class="w-2 h-2 bg-[#8b0202] rounded-full"></span>
+                                            <span>Infinity pool & spa</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <span class="w-2 h-2 bg-[#8b0202] rounded-full"></span>
+                                            <span>State-of-the-art fitness center</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <span class="w-2 h-2 bg-[#8b0202] rounded-full"></span>
+                                            <span>Rooftop meditation gardens</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Sustainability Feature -->
+                        <div class="feature-hover-card bg-white p-8 rounded-2xl shadow-lg border border-gray-100 cursor-pointer transition-all duration-300 hover:shadow-xl hover:scale-105 hover:border-[#8b0202]" data-feature="sustainability">
+                            <div class="flex items-start space-x-4">
+                                <div class="bg-gradient-to-r from-[#8b0202] to-[#951818] w-16 h-16 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <span class="text-white text-2xl">🌍</span>
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="font-playfair text-2xl font-bold text-gray-900 mb-3">Sustainable Living</h3>
+                                    <p class="text-gray-600 mb-4">Embrace eco-conscious living with our comprehensive sustainability initiatives. Every element is designed to minimize environmental impact while maximizing your quality of life.</p>
+                                    <ul class="space-y-2 text-sm text-gray-600">
+                                        <li class="flex items-center space-x-2">
+                                            <span class="w-2 h-2 bg-[#8b0202] rounded-full"></span>
+                                            <span>Solar energy systems</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <span class="w-2 h-2 bg-[#8b0202] rounded-full"></span>
+                                            <span>Water conservation technology</span>
+                                        </li>
+                                        <li class="flex items-center space-x-2">
+                                            <span class="w-2 h-2 bg-[#8b0202] rounded-full"></span>
+                                            <span>LEED Gold certification</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Image Display Column -->
+                    <div class="sticky top-24">
+                        <div class="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+                            <!-- Smart Home Image -->
+                            <div class="feature-image active absolute inset-0 transition-all duration-500 ease-in-out" id="smart-home-image">
+                               <img src="images/kothagiri-real-estate-ban-5.jpg" />
+                            </div>
+                            
+                            <!-- Luxury Interiors Image -->
+                            <div class="feature-image absolute inset-0 opacity-0 transition-all duration-500 ease-in-out" id="luxury-interiors-image">
+                                <img src="images/kothagiri-real-estate-ban-4.jpg" />
+                            </div>
+                            
+                            <!-- Wellness Image -->
+                            <div class="feature-image absolute inset-0 opacity-0 transition-all duration-500 ease-in-out" id="wellness-image">
+                                <img src="images/kothagiri-real-estate-ban-2.jpg" />
+                            </div>
+                            
+                            <!-- Sustainability Image -->
+                            <div class="feature-image absolute inset-0 opacity-0 transition-all duration-500 ease-in-out" id="sustainability-image">
+                                <img src="images/kothagiri-real-estate-ban-6.jpg" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 overflow-hidden" style="background-color: #F9F2F2;">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Explore Our <span class="highlight-text">Luxury Gallery</span>
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Take a visual journey through our exquisite residences, amenities, and architectural excellence
+                </p>
+            </div>
+            
+            <!-- Gallery Swiper -->
+            <div class="relative">
+                <div class="swiper gallerySwiper overflow-visible">
+                    <div class="swiper-wrapper">
+                        <!-- Exterior View -->
+                        <div class="swiper-slide">
+                            <div class="rounded-2xl  relative overflow-hidden group cursor-pointer gallery-slide" data-title="Majestic Exterior" data-subtitle="Architectural Excellence">
+                                <div class="gallery-slide-zoom-indicator">🔍 Click to zoom</div>
+                                <img src="images/kothagiri-real-estate-gallery-1.jpg" />
+                            </div>
+                        </div>
+                        
+                        <!-- Lobby -->
+                        <div class="swiper-slide">
+                            <div class="bg-gradient-to-br from-amber-100 to-yellow-200 rounded-2xl  relative overflow-hidden group cursor-pointer gallery-slide" data-title="Grand Lobby" data-subtitle="Elegant Welcome">
+                                <div class="gallery-slide-zoom-indicator">🔍 Click to zoom</div>
+                                <img src="images/kothagiri-real-estate-gallery-2.jpg" />
+                            </div>
+                        </div>
+                        
+                        <!-- Swimming Pool -->
+                        <div class="swiper-slide">
+                            <div class="rounded-2xl  relative overflow-hidden group cursor-pointer gallery-slide" data-title="Infinity Pool" data-subtitle="Rooftop Paradise">
+                                <div class="gallery-slide-zoom-indicator">🔍 Click to zoom</div>
+                                <img src="images/kothagiri-real-estate-gallery-3.jpg" />
+                            </div>
+                        </div>
+                        
+                        <!-- Fitness Center -->
+                        <div class="swiper-slide">
+                            <div class="rounded-2xl  relative overflow-hidden group cursor-pointer gallery-slide" data-title="Fitness Center" data-subtitle="State-of-the-Art Equipment">
+                                <div class="gallery-slide-zoom-indicator">🔍 Click to zoom</div>
+                                <img src="images/kothagiri-real-estate-gallery-4.jpg" />
+                            </div>
+                        </div>
+                        
+                        <!-- Living Room Interior -->
+                        <div class="swiper-slide">
+                            <div class="bg-gradient-to-br from-purple-600 to-indigo-700 rounded-2xl  relative overflow-hidden group cursor-pointer gallery-slide" data-title="Luxury Interiors" data-subtitle="Designer Living Spaces">
+                                <div class="gallery-slide-zoom-indicator">🔍 Click to zoom</div>
+                                <img src="images/kothagiri-real-estate-gallery-5.jpg" />
+                            </div>
+                        </div>
+                        
+                        <!-- Kitchen -->
+                        <div class="swiper-slide">
+                            <div class="bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl  relative overflow-hidden group cursor-pointer gallery-slide" data-title="Gourmet Kitchen" data-subtitle="Premium Appliances">
+                                <div class="gallery-slide-zoom-indicator">🔍 Click to zoom</div>
+                                <img src="images/kothagiri-real-estate-gallery-6.jpg" />
+                            </div>
+                        </div>
+                        
+                    
+                    </div>
+                </div>
+                
+                <!-- Navigation Buttons -->
+                <div class="flex justify-center mt-8 space-x-4">
+                    <button class="gallery-prev bg-white p-3 rounded-full hover:shadow-lg transition-all duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        </svg>
+                    </button>
+                    <button class="gallery-next bg-white p-3 rounded-full hover:shadow-lg transition-all duration-300">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                        </svg>
+                    </button>
+                </div>
+                
+                <!-- Pagination Dots -->
+                <div class="gallery-pagination flex justify-center mt-6 space-x-2"></div>
+            </div>
+            
+            <!-- Gallery Stats -->
+            <div class="mt-16 grid md:grid-cols-3 gap-8 text-center">
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-3xl font-bold text-gray-900 mb-2">50+</div>
+                    <p class="text-gray-600">Premium Amenities</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-3xl font-bold text-gray-900 mb-2">360°</div>
+                    <p class="text-gray-600">Panoramic Views</p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-lg">
+                    <div class="text-3xl font-bold text-gray-900 mb-2">24/7</div>
+                    <p class="text-gray-600">Concierge Service</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Amenities Section -->
+    <section id="amenities" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Amenities That Redefine <span class="highlight-text">Luxury</span>
+                </h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-xl text-center shadow-lg border border-gray-100">
+                    <div class="text-4xl mb-4 text-center"><img src="images/swiming-pool.png" width="72" /></div>
+                    <h3 class="font-semibold text-lg text-gray-900">Infinity-edge Swimming Pool</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl text-center shadow-lg border border-gray-100">
+                    <div class="text-4xl mb-4 text-center"><img src="images/dumbbell.png" width="72" /></div>
+                    <h3 class="font-semibold text-lg text-gray-900">Fully Equipped Fitness Center</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl text-center shadow-lg border border-gray-100">
+                    <div class="text-4xl mb-4 text-center "><img src="images/cinema-screen.png" width="72" /></div>
+                    <h3 class="font-semibold text-lg text-gray-900">Private Cinema Lounge</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl text-center shadow-lg border border-gray-100">
+                    <div class="text-4xl mb-4 text-center"><img src="images/children-park.png" width="72" /></div>
+                    <h3 class="font-semibold text-lg text-gray-900">Children's Play Area</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl text-center shadow-lg border border-gray-100">
+                    <div class="text-4xl mb-4 text-center"><img src="images/security.png" width="72" /></div>
+                    <h3 class="font-semibold text-lg text-gray-900">24/7 Concierge & Security</h3>
+                </div>
+                <div class="bg-white p-6 rounded-xl text-center shadow-lg border border-gray-100">
+                    <div class="text-4xl mb-4 text-center"><img src="images/car-parking.png" width="72" /></div>
+                    <h3 class="font-semibold text-lg text-gray-900">Dedicated Parking</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Master Floor Plan Section -->
+    <section id="floor-plan" class="py-20" style="background-color: #F9F2F2;">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                    Master Floor Plan & Ground Level Amenities
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Discover thoughtful planning and seamless convenience at every step. Our master floor plan is designed to offer effortless access, security, and comfort.
+                </p>
+            </div>
+            
+            <!-- Floor Plan Image with Zoom Effect -->
+            <div class="mb-16">
+                <div id="floorPlanContainer" class="floor-plan-container bg-white rounded-2xl p-8 shadow-xl overflow-hidden cursor-zoom-in">
+                    <div class="floor-plan-image-wrapper relative">
+                        <svg id="floorPlanImage" class="floor-plan-image w-full h-auto transition-transform duration-500 ease-in-out hover:scale-110" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background -->
+                            <rect width="800" height="600" fill="#f9f2f2"/>
+                            
+                            <!-- Main Building Structure -->
+                            <rect x="200" y="150" width="400" height="300" fill="#fff" stroke="#8b0202" stroke-width="3"/>
+                            
+                            <!-- Entry/Exit Points -->
+                            <rect x="180" y="280" width="40" height="40" fill="#3b82f6" stroke="#1e40af" stroke-width="2"/>
+                            <text x="200" y="305" text-anchor="middle" fill="white" font-size="12" font-weight="bold">01</text>
+                            <rect x="580" y="280" width="40" height="40" fill="#3b82f6" stroke="#1e40af" stroke-width="2"/>
+                            <text x="600" y="305" text-anchor="middle" fill="white" font-size="12" font-weight="bold">01</text>
+                            
+                            <!-- Parking Areas -->
+                            <rect x="50" y="200" width="120" height="200" fill="#eab308" stroke="#ca8a04" stroke-width="2"/>
+                            <text x="110" y="305" text-anchor="middle" fill="white" font-size="14" font-weight="bold">03</text>
+                            <text x="110" y="320" text-anchor="middle" fill="white" font-size="10">PARKING</text>
+                            
+                            <rect x="630" y="200" width="120" height="200" fill="#eab308" stroke="#ca8a04" stroke-width="2"/>
+                            <text x="690" y="305" text-anchor="middle" fill="white" font-size="14" font-weight="bold">03</text>
+                            <text x="690" y="320" text-anchor="middle" fill="white" font-size="10">PARKING</text>
+                            
+                            <!-- Tower Drop Off -->
+                            <ellipse cx="400" cy="120" rx="80" ry="30" fill="#a855f7" stroke="#7c3aed" stroke-width="2"/>
+                            <text x="400" y="125" text-anchor="middle" fill="white" font-size="14" font-weight="bold">04</text>
+                            <text x="400" y="140" text-anchor="middle" fill="white" font-size="10">TOWER DROP OFF</text>
+                            
+                            <!-- Lobby Entry -->
+                            <rect x="350" y="150" width="100" height="60" fill="#14b8a6" stroke="#0d9488" stroke-width="2"/>
+                            <text x="400" y="185" text-anchor="middle" fill="white" font-size="14" font-weight="bold">09</text>
+                            <text x="400" y="200" text-anchor="middle" fill="white" font-size="10">LOBBY</text>
+                            
+                            <!-- Security -->
+                            <rect x="250" y="180" width="60" height="40" fill="#6366f1" stroke="#4f46e5" stroke-width="2"/>
+                            <text x="280" y="205" text-anchor="middle" fill="white" font-size="12" font-weight="bold">06</text>
+                            
+                            <rect x="490" y="180" width="60" height="40" fill="#6366f1" stroke="#4f46e5" stroke-width="2"/>
+                            <text x="520" y="205" text-anchor="middle" fill="white" font-size="12" font-weight="bold">06</text>
+                            
+                            <!-- Services -->
+                            <rect x="220" y="240" width="80" height="60" fill="#10b981" stroke="#059669" stroke-width="2"/>
+                            <text x="260" y="275" text-anchor="middle" fill="white" font-size="12" font-weight="bold">02</text>
+                            
+                            <rect x="500" y="240" width="80" height="60" fill="#10b981" stroke="#059669" stroke-width="2"/>
+                            <text x="540" y="275" text-anchor="middle" fill="white" font-size="12" font-weight="bold">02</text>
+                            
+                            <!-- Basement Entry/Exit -->
+                            <rect x="320" y="380" width="60" height="40" fill="#ec4899" stroke="#db2777" stroke-width="2"/>
+                            <text x="350" y="405" text-anchor="middle" fill="white" font-size="12" font-weight="bold">07</text>
+                            
+                            <rect x="420" y="380" width="60" height="40" fill="#f97316" stroke="#ea580c" stroke-width="2"/>
+                            <text x="450" y="405" text-anchor="middle" fill="white" font-size="12" font-weight="bold">08</text>
+                            
+                            <!-- Driveways -->
+                            <path d="M200 480 Q400 460 600 480" fill="none" stroke="#dc2626" stroke-width="8" stroke-linecap="round"/>
+                            <text x="400" y="500" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold">05 - DRIVEWAY</text>
+                            
+                            <path d="M200 120 Q400 100 600 120" fill="none" stroke="#dc2626" stroke-width="8" stroke-linecap="round"/>
+                            <text x="400" y="90" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold">05 - DRIVEWAY</text>
+                            
+                            <!-- Landscaping -->
+                            <circle cx="150" cy="150" r="25" fill="#22c55e" opacity="0.7"/>
+                            <circle cx="650" cy="150" r="25" fill="#22c55e" opacity="0.7"/>
+                            <circle cx="150" cy="450" r="25" fill="#22c55e" opacity="0.7"/>
+                            <circle cx="650" cy="450" r="25" fill="#22c55e" opacity="0.7"/>
+                            
+                            <!-- Title -->
+                            <text x="400" y="40" text-anchor="middle" fill="#8b0202" font-size="24" font-weight="bold">MASTER FLOOR PLAN</text>
+                            <text x="400" y="60" text-anchor="middle" fill="#951818" font-size="14">Ground Level Layout</text>
+                        </svg>
+                        
+                        <!-- Zoom Overlay -->
+                        <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-all duration-300 flex items-center justify-center opacity-0 hover:opacity-100">
+                            <div class="bg-white bg-opacity-90 px-4 py-2 rounded-full">
+                                <span class="text-gray-800 font-semibold">🔍 Click to zoom</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-2xl p-8 shadow-xl">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h3 class="font-playfair text-3xl font-bold text-gray-900 mb-8">Ground Level Amenities Include:</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-gradient-to-r from-[#8b0202] to-[#951818] w-8 h-8 rounded-full flex items-center justify-center text-white font-bold">1</div>
+                                <span class="text-gray-700">Secure, well-marked entry and exit points</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-gradient-to-r from-[#8b0202] to-[#951818] w-8 h-8 rounded-full flex items-center justify-center text-white font-bold">2</div>
+                                <span class="text-gray-700">Dedicated parking zones for residents and visitors</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-gradient-to-r from-[#8b0202] to-[#951818] w-8 h-8 rounded-full flex items-center justify-center text-white font-bold">3</div>
+                                <span class="text-gray-700">Elegant tower drop-off area for grand arrival</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-gradient-to-r from-[#8b0202] to-[#951818] w-8 h-8 rounded-full flex items-center justify-center text-white font-bold">4</div>
+                                <span class="text-gray-700">Spacious lobby entry with welcoming ambiance</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-gradient-to-r from-[#8b0202] to-[#951818] w-8 h-8 rounded-full flex items-center justify-center text-white font-bold">5</div>
+                                <span class="text-gray-700">24/7 security for peace of mind</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-gradient-to-r from-[#8b0202] to-[#951818] w-8 h-8 rounded-full flex items-center justify-center text-white font-bold">6</div>
+                                <span class="text-gray-700">Easy access to basement parking</span>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="bg-gradient-to-r from-[#8b0202] to-[#951818] w-8 h-8 rounded-full flex items-center justify-center text-white font-bold">7</div>
+                                <span class="text-gray-700">Well-planned driveways for smooth traffic flow</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-[#f9f2f2] p-8 rounded-xl border border-[#b45d5d]">
+                        <h4 class="font-crimson text-2xl font-bold text-[#8b0202] mb-6 text-center">LEGEND</h4>
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 bg-blue-500 rounded"></span>
+                                <span class="text-[#8b0202]">01. ENTRY/EXIT</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 bg-green-500 rounded"></span>
+                                <span class="text-[#8b0202]">02. SERVICES</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 bg-yellow-500 rounded"></span>
+                                <span class="text-[#8b0202]">03. PARKING</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 bg-purple-500 rounded"></span>
+                                <span class="text-[#8b0202]">04. TOWER DROP OFF</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 bg-red-500 rounded"></span>
+                                <span class="text-[#8b0202]">05. DRIVEWAY</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 bg-indigo-500 rounded"></span>
+                                <span class="text-[#8b0202]">06. SECURITY</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 bg-pink-500 rounded"></span>
+                                <span class="text-[#8b0202]">07. ENTRY TO BASEMENT</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 bg-orange-500 rounded"></span>
+                                <span class="text-[#8b0202]">08. EXIT FROM BASEMENT</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="w-4 h-4 bg-teal-500 rounded"></span>
+                                <span class="text-[#8b0202]">09. LOBBY ENTRY</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                Starting at Just <span class="highlight-text">₹2.95 Crores</span>
+            </h2>
+            <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                Your dream home is within reach. Limited units available—secure your exclusive residence today!
+            </p>
+            <button onclick="scrollToSection('tour')" class="primary-button px-12 py-4 rounded-full font-bold text-xl hover:shadow-2xl transition-all duration-300 hover-scale">
+                Book Your Private Tour Now
+            </button>
+        </div>
+    </section>
+
+    <!-- Site Visit Form Section -->
+    <section id="tour" class="py-20" style="background-color: #F9F2F2;">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="font-playfair text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                        Book Your <span class="highlight-text">Exclusive Site Visit</span>
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-4">
+                        See your future home in person. Experience the luxury, space, and amenities first-hand.
+                    </p>
+                    <p class="text-lg text-gray-700">
+                        Schedule Your Private Tour Today
+                    </p>
+                </div>
+                
+                <div class="bg-white rounded-2xl p-8 text-gray-900">
+                    <form id="siteVisitForm" class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
+                            <input type="text" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number *</label>
+                            <input type="tel" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
+                            <input type="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Preferred Date & Time *</label>
+                            <input type="datetime-local" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Number of Guests</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                                <option>1 Guest</option>
+                                <option>2 Guests</option>
+                                <option>3-4 Guests</option>
+                                <option>5+ Guests</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Interested in</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                                <option>3 BHK</option>
+                                <option>4 BHK</option>
+                                <option>5 BHK</option>
+                                <option>Penthouse</option>
+                                <option>All Options</option>
+                            </select>
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Any Special Requests</label>
+                            <textarea rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-transparent" placeholder="Any specific requirements or questions..."></textarea>
+                        </div>
+                        <div class="md:col-span-2 text-center">
+                            <button type="submit" class="primary-button px-12 py-4 rounded-full font-bold text-lg hover:shadow-2xl transition-all duration-300 hover-scale">
+                                Schedule My Visit
+                            </button>
+                        </div>
+                    </form>
+                    
+                    <div class="mt-8 p-6 bg-gray-50 rounded-xl">
+                        <h4 class="font-playfair text-xl font-bold text-gray-900 mb-4">Why Visit Us?</h4>
+                        <div class="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-yellow-600">✓</span>
+                                <span>Walk through fully furnished model homes</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-yellow-600">✓</span>
+                                <span>Explore rooftop experiences and amenities</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-yellow-600">✓</span>
+                                <span>Meet our expert sales team</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-yellow-600">✓</span>
+                                <span>Get all your questions answered in person</span>
+                            </div>
+                        </div>
+                        <p class="text-center text-sm text-gray-600 mt-4 font-semibold">
+                            Limited slots available. Book now to reserve your spot!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Designers Section -->
+    <section class="py-20 gold-gradient text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="font-playfair text-4xl md:text-5xl font-bold mb-6">
+                Designed by <span class="text-white bg-clip-text text-transparent">Andy Fisher & Hadi Tehrani</span>
+            </h2>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                World-class visionaries, bringing global design excellence to your doorstep.
+            </p>
+        </div>
+    </section>
+
+    <!-- Floor Plan Zoom Modal -->
+    <div id="zoomModal" class="zoom-modal">
+        <div class="zoom-modal-content">
+            <button id="zoomClose" class="zoom-close">&times;</button>
+            <svg class="floor-plan-zoomed" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+                <!-- Background -->
+                <rect width="800" height="600" fill="#f9f2f2"/>
+                
+                <!-- Main Building Structure -->
+                <rect x="200" y="150" width="400" height="300" fill="#fff" stroke="#8b0202" stroke-width="3"/>
+                
+                <!-- Entry/Exit Points -->
+                <rect x="180" y="280" width="40" height="40" fill="#3b82f6" stroke="#1e40af" stroke-width="2"/>
+                <text x="200" y="305" text-anchor="middle" fill="white" font-size="12" font-weight="bold">01</text>
+                <rect x="580" y="280" width="40" height="40" fill="#3b82f6" stroke="#1e40af" stroke-width="2"/>
+                <text x="600" y="305" text-anchor="middle" fill="white" font-size="12" font-weight="bold">01</text>
+                
+                <!-- Parking Areas -->
+                <rect x="50" y="200" width="120" height="200" fill="#eab308" stroke="#ca8a04" stroke-width="2"/>
+                <text x="110" y="305" text-anchor="middle" fill="white" font-size="14" font-weight="bold">03</text>
+                <text x="110" y="320" text-anchor="middle" fill="white" font-size="10">PARKING</text>
+                
+                <rect x="630" y="200" width="120" height="200" fill="#eab308" stroke="#ca8a04" stroke-width="2"/>
+                <text x="690" y="305" text-anchor="middle" fill="white" font-size="14" font-weight="bold">03</text>
+                <text x="690" y="320" text-anchor="middle" fill="white" font-size="10">PARKING</text>
+                
+                <!-- Tower Drop Off -->
+                <ellipse cx="400" cy="120" rx="80" ry="30" fill="#a855f7" stroke="#7c3aed" stroke-width="2"/>
+                <text x="400" y="125" text-anchor="middle" fill="white" font-size="14" font-weight="bold">04</text>
+                <text x="400" y="140" text-anchor="middle" fill="white" font-size="10">TOWER DROP OFF</text>
+                
+                <!-- Lobby Entry -->
+                <rect x="350" y="150" width="100" height="60" fill="#14b8a6" stroke="#0d9488" stroke-width="2"/>
+                <text x="400" y="185" text-anchor="middle" fill="white" font-size="14" font-weight="bold">09</text>
+                <text x="400" y="200" text-anchor="middle" fill="white" font-size="10">LOBBY</text>
+                
+                <!-- Security -->
+                <rect x="250" y="180" width="60" height="40" fill="#6366f1" stroke="#4f46e5" stroke-width="2"/>
+                <text x="280" y="205" text-anchor="middle" fill="white" font-size="12" font-weight="bold">06</text>
+                
+                <rect x="490" y="180" width="60" height="40" fill="#6366f1" stroke="#4f46e5" stroke-width="2"/>
+                <text x="520" y="205" text-anchor="middle" fill="white" font-size="12" font-weight="bold">06</text>
+                
+                <!-- Services -->
+                <rect x="220" y="240" width="80" height="60" fill="#10b981" stroke="#059669" stroke-width="2"/>
+                <text x="260" y="275" text-anchor="middle" fill="white" font-size="12" font-weight="bold">02</text>
+                
+                <rect x="500" y="240" width="80" height="60" fill="#10b981" stroke="#059669" stroke-width="2"/>
+                <text x="540" y="275" text-anchor="middle" fill="white" font-size="12" font-weight="bold">02</text>
+                
+                <!-- Basement Entry/Exit -->
+                <rect x="320" y="380" width="60" height="40" fill="#ec4899" stroke="#db2777" stroke-width="2"/>
+                <text x="350" y="405" text-anchor="middle" fill="white" font-size="12" font-weight="bold">07</text>
+                
+                <rect x="420" y="380" width="60" height="40" fill="#f97316" stroke="#ea580c" stroke-width="2"/>
+                <text x="450" y="405" text-anchor="middle" fill="white" font-size="12" font-weight="bold">08</text>
+                
+                <!-- Driveways -->
+                <path d="M200 480 Q400 460 600 480" fill="none" stroke="#dc2626" stroke-width="8" stroke-linecap="round"/>
+                <text x="400" y="500" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold">05 - DRIVEWAY</text>
+                
+                <path d="M200 120 Q400 100 600 120" fill="none" stroke="#dc2626" stroke-width="8" stroke-linecap="round"/>
+                <text x="400" y="90" text-anchor="middle" fill="#dc2626" font-size="12" font-weight="bold">05 - DRIVEWAY</text>
+                
+                <!-- Landscaping -->
+                <circle cx="150" cy="150" r="25" fill="#22c55e" opacity="0.7"/>
+                <circle cx="650" cy="150" r="25" fill="#22c55e" opacity="0.7"/>
+                <circle cx="150" cy="450" r="25" fill="#22c55e" opacity="0.7"/>
+                <circle cx="650" cy="450" r="25" fill="#22c55e" opacity="0.7"/>
+                
+                <!-- Title -->
+                <text x="400" y="40" text-anchor="middle" fill="#8b0202" font-size="24" font-weight="bold">MASTER FLOOR PLAN</text>
+                <text x="400" y="60" text-anchor="middle" fill="#951818" font-size="14">Ground Level Layout - Detailed View</text>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Gallery Zoom Modal -->
+    <div id="galleryZoomModal" class="gallery-zoom-modal">
+        <div class="gallery-zoom-content">
+            <button id="galleryZoomClose" class="gallery-zoom-close">&times;</button>
+            <div id="galleryZoomImageContainer" class="gallery-zoom-image-container">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+            <div id="galleryZoomTitle" class="gallery-zoom-title">
+                <h3 id="galleryZoomTitleText">Gallery Image</h3>
+                <p id="galleryZoomSubtitleText">Click to view details</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-12 gold-gradients text-white text-center">
+        <div class="container mx-auto px-6">
+            <h3 class="font-playfair text-3xl font-bold mb-4">
+                Live <span class="gold-gradient bg-clip-text text-transparent">Elevated</span>. Live <span class="gold-gradient bg-clip-text text-transparent">Inspired</span>.
+            </h3>
+            <p class="text-gray-400">© 2024 Luxury Residences. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Swiper
+        const apartmentSwiper = new Swiper('.apartmentSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            }
+        });
+
+        // Initialize Gallery Swiper
+        const gallerySwiper = new Swiper('.gallerySwiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.gallery-pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + ' w-3 h-3 bg-gray-400 rounded-full cursor-pointer transition-all duration-300 hover:bg-red-600"></span>';
+                },
+            },
+            navigation: {
+                nextEl: '.gallery-next',
+                prevEl: '.gallery-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 40,
+                },
+                1280: {
+                    slidesPerView: 3,
+                    spaceBetween: 50,
+                }
+            },
+            on: {
+                init: function () {
+                    // Add custom styling to pagination bullets
+                    const bullets = document.querySelectorAll('.gallery-pagination .swiper-pagination-bullet');
+                    bullets.forEach(bullet => {
+                        bullet.classList.add('!bg-gray-400', '!opacity-50');
+                    });
+                    const activeBullet = document.querySelector('.gallery-pagination .swiper-pagination-bullet-active');
+                    if (activeBullet) {
+                        activeBullet.classList.remove('!bg-gray-400');
+                        activeBullet.classList.add('!bg-red-600', '!opacity-100');
+                    }
+                },
+                slideChange: function () {
+                    // Update pagination bullet colors
+                    const bullets = document.querySelectorAll('.gallery-pagination .swiper-pagination-bullet');
+                    bullets.forEach(bullet => {
+                        bullet.classList.remove('!bg-red-600', '!opacity-100');
+                        bullet.classList.add('!bg-gray-400', '!opacity-50');
+                    });
+                    const activeBullet = document.querySelector('.gallery-pagination .swiper-pagination-bullet-active');
+                    if (activeBullet) {
+                        activeBullet.classList.remove('!bg-gray-400', '!opacity-50');
+                        activeBullet.classList.add('!bg-red-600', '!opacity-100');
+                    }
+                }
+            }
+        });
+
+        // Feature hover and scroll functionality
+        function initializeFeatureHover() {
+            const featureCards = document.querySelectorAll('.feature-hover-card');
+            const featureImages = document.querySelectorAll('.feature-image');
+            let currentActiveFeature = 'smart-home';
+            
+            // Function to switch images
+            function switchToFeature(featureType) {
+                if (featureType === currentActiveFeature) return;
+                
+                // Hide all images
+                featureImages.forEach(img => {
+                    img.classList.remove('active');
+                    img.style.opacity = '0';
+                    img.style.transform = 'scale(0.95)';
+                });
+                
+                // Show corresponding image with animation
+                const targetImage = document.getElementById(`${featureType}-image`);
+                if (targetImage) {
+                    setTimeout(() => {
+                        targetImage.classList.add('active');
+                        targetImage.style.opacity = '1';
+                        targetImage.style.transform = 'scale(1)';
+                    }, 150);
+                }
+                
+                // Update active card styling
+                featureCards.forEach(card => {
+                    card.classList.remove('ring-2', 'ring-[#8b0202]', 'bg-red-50');
+                });
+                
+                const activeCard = document.querySelector(`[data-feature="${featureType}"]`);
+                if (activeCard) {
+                    activeCard.classList.add('ring-2', 'ring-[#8b0202]', 'bg-red-50');
+                }
+                
+                currentActiveFeature = featureType;
+            }
+            
+            // Hover functionality
+            featureCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    const featureType = card.getAttribute('data-feature');
+                    switchToFeature(featureType);
+                });
+            });
+            
+            // Scroll-based reveal functionality
+            const observerOptions = {
+                threshold: 0.6,
+                rootMargin: '0px 0px -100px 0px'
+            };
+            
+            const featureObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const featureType = entry.target.getAttribute('data-feature');
+                        if (featureType) {
+                            // Add staggered animation delay
+                            const cards = Array.from(featureCards);
+                            const cardIndex = cards.indexOf(entry.target);
+                            
+                            setTimeout(() => {
+                                entry.target.style.opacity = '1';
+                                entry.target.style.transform = 'translateY(0)';
+                                
+                                // Auto-switch to this feature if it's the first visible one
+                                if (cardIndex === 0 || !document.querySelector('.feature-hover-card.ring-2')) {
+                                    switchToFeature(featureType);
+                                }
+                            }, cardIndex * 200);
+                        }
+                    }
+                });
+            }, observerOptions);
+            
+            // Set initial state for cards and observe them
+            featureCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                featureObserver.observe(card);
+            });
+            
+            // Initialize first image as active
+            const firstImage = document.getElementById('smart-home-image');
+            if (firstImage) {
+                firstImage.classList.add('active');
+                firstImage.style.opacity = '1';
+                firstImage.style.transform = 'scale(1)';
+            }
+            
+            // Initialize first card as active
+            const firstCard = document.querySelector('[data-feature="smart-home"]');
+            if (firstCard) {
+                firstCard.classList.add('ring-2', 'ring-[#8b0202]', 'bg-red-50');
+            }
+        }
+
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        function scrollToSection(sectionId) {
+            const targetSection = document.getElementById(sectionId);
+            const headerHeight = 80; // Height of fixed header
+            const targetPosition = targetSection.offsetTop - headerHeight;
+            
+            // Smooth scroll with custom easing
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+            
+            // Close mobile menu if open
+            document.getElementById('mobileMenu').classList.add('hidden');
+            
+            // Add visual feedback - highlight the target section briefly
+            targetSection.style.transition = 'all 0.3s ease';
+            targetSection.style.transform = 'scale(1.01)';
+            targetSection.style.boxShadow = '0 0 30px rgba(139, 2, 2, 0.1)';
+            
+            setTimeout(() => {
+                targetSection.style.transform = 'scale(1)';
+                targetSection.style.boxShadow = 'none';
+            }, 300);
+        }
+
+        // Enhanced smooth scrolling for better performance
+        document.documentElement.style.scrollBehavior = 'smooth';
+        
+        // Add active navigation highlighting
+        function updateActiveNavigation() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('nav a[href^="#"]');
+            
+            let currentSection = '';
+            const scrollPosition = window.scrollY + 100;
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-red-600', 'font-bold');
+                link.classList.add('text-gray-700');
+                
+                if (link.getAttribute('href') === `#${currentSection}`) {
+                    link.classList.remove('text-gray-700');
+                    link.classList.add('text-red-600', 'font-bold');
+                }
+            });
+        }
+        
+        // Update active navigation on scroll
+        window.addEventListener('scroll', updateActiveNavigation);
+        window.addEventListener('load', updateActiveNavigation);
+
+        document.getElementById('siteVisitForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const name = this.querySelector('input[type="text"]').value;
+            const phone = this.querySelector('input[type="tel"]').value;
+            const email = this.querySelector('input[type="email"]').value;
+            const datetime = this.querySelector('input[type="datetime-local"]').value;
+            
+            // Show success message
+            const button = this.querySelector('button[type="submit"]');
+            const originalText = button.textContent;
+            button.textContent = 'Visit Scheduled! ✓';
+            button.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
+            
+            // Show confirmation alert
+            alert(`Thank you ${name}! Your site visit has been scheduled. Our team will contact you at ${phone} to confirm your appointment on ${new Date(datetime).toLocaleDateString()} at ${new Date(datetime).toLocaleTimeString()}.`);
+            
+            // Reset form after 3 seconds
+            setTimeout(() => {
+                this.reset();
+                button.textContent = originalText;
+                button.style.background = '';
+            }, 3000);
+        });
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Floor Plan Zoom Functionality
+        function initializeFloorPlanZoom() {
+            const floorPlanContainer = document.getElementById('floorPlanContainer');
+            const zoomModal = document.getElementById('zoomModal');
+            const zoomClose = document.getElementById('zoomClose');
+            
+            if (floorPlanContainer && zoomModal && zoomClose) {
+                // Open zoom modal when clicking floor plan
+                floorPlanContainer.addEventListener('click', function() {
+                    // Add a subtle click animation
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                    
+                    // Show modal with delay for smooth transition
+                    setTimeout(() => {
+                        zoomModal.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    }, 100);
+                });
+                
+                // Close zoom modal when clicking close button
+                zoomClose.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    closeZoomModal();
+                });
+                
+                // Close zoom modal when clicking outside the content
+                zoomModal.addEventListener('click', function(e) {
+                    if (e.target === zoomModal) {
+                        closeZoomModal();
+                    }
+                });
+                
+                // Close zoom modal with Escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && zoomModal.classList.contains('active')) {
+                        closeZoomModal();
+                    }
+                });
+                
+                function closeZoomModal() {
+                    zoomModal.classList.remove('active');
+                    setTimeout(() => {
+                        document.body.style.overflow = 'auto';
+                    }, 300);
+                }
+            }
+        }
+
+        // Gallery Zoom Functionality
+        function initializeGalleryZoom() {
+            const gallerySlides = document.querySelectorAll('.gallery-slide');
+            const galleryZoomModal = document.getElementById('galleryZoomModal');
+            const galleryZoomClose = document.getElementById('galleryZoomClose');
+            const galleryZoomImageContainer = document.getElementById('galleryZoomImageContainer');
+            const galleryZoomTitleText = document.getElementById('galleryZoomTitleText');
+            const galleryZoomSubtitleText = document.getElementById('galleryZoomSubtitleText');
+            
+            if (gallerySlides.length > 0 && galleryZoomModal && galleryZoomClose) {
+                // Add click event to each gallery slide
+                gallerySlides.forEach(slide => {
+                    slide.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        // Add click animation
+                        this.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            this.style.transform = '';
+                        }, 150);
+                        
+                        const title = this.getAttribute('data-title') || 'Gallery Image';
+                        const subtitle = this.getAttribute('data-subtitle') || 'Luxury Living Space';
+                        
+                        // Clone the slide content for the modal
+                        const slideContent = this.cloneNode(true);
+                        slideContent.classList.remove('gallery-slide');
+                        slideContent.classList.add('gallery-zoom-image');
+                        slideContent.style.height = 'auto';
+                        slideContent.style.minHeight = '500px';
+                        slideContent.style.transform = 'scale(0.9)';
+                        slideContent.style.transition = 'all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+                        
+                        // Remove the zoom indicator from the cloned content
+                        const zoomIndicator = slideContent.querySelector('.gallery-slide-zoom-indicator');
+                        if (zoomIndicator) {
+                            zoomIndicator.remove();
+                        }
+                        
+                        // Clear previous content and add new content
+                        galleryZoomImageContainer.innerHTML = '';
+                        galleryZoomImageContainer.appendChild(slideContent);
+                        
+                        // Update title and subtitle
+                        galleryZoomTitleText.textContent = title;
+                        galleryZoomSubtitleText.textContent = subtitle;
+                        
+                        // Show modal with delay for smooth transition
+                        setTimeout(() => {
+                            galleryZoomModal.classList.add('active');
+                            document.body.style.overflow = 'hidden';
+                            
+                            // Animate the cloned content
+                            setTimeout(() => {
+                                slideContent.style.transform = 'scale(1)';
+                            }, 200);
+                        }, 100);
+                    });
+                });
+                
+                // Close modal when clicking close button
+                galleryZoomClose.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    closeGalleryModal();
+                });
+                
+                // Close modal when clicking outside the content
+                galleryZoomModal.addEventListener('click', function(e) {
+                    if (e.target === galleryZoomModal) {
+                        closeGalleryModal();
+                    }
+                });
+                
+                // Close modal with Escape key
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && galleryZoomModal.classList.contains('active')) {
+                        closeGalleryModal();
+                    }
+                });
+                
+                function closeGalleryModal() {
+                    galleryZoomModal.classList.remove('active');
+                    setTimeout(() => {
+                        document.body.style.overflow = 'auto';
+                    }, 400);
+                }
+            }
+        }
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeFeatureHover();
+            initializeFloorPlanZoom();
+            initializeGalleryZoom();
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'96d5aab6b6adac91',t:'MTc1NDg5MzY0NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
